@@ -29,9 +29,46 @@ visible rows are in the DOM, a **debounced** search, `OnPush`/signals and
 
 ## Getting started
 
-There is no starter project on purpose — set up the Angular app yourself
-(`ng new`), so we can see how you structure things from scratch. Keep it to a
-single, focused screen.
+There is no starter project on purpose — set up the Angular app yourself, so we
+can see how you structure things from scratch. Keep it to a single, focused screen.
+
+**1. Get your own copy of this repo**
+
+- Click the green **"Use this template" → "Create a new repository"** button at the
+  top of this page, and create it under **your own** GitHub account.
+  *(Alternatively, clone this repo and push it to a fresh repository of yours —
+  please don't open pull requests against this template.)*
+- Clone your new repository locally:
+  ```bash
+  git clone https://github.com/<your-username>/<your-repo>.git
+  cd <your-repo>
+  ```
+
+**2. Create the Angular app inside it**
+
+```bash
+# install the Angular CLI if you don't have it
+npm install -g @angular/cli
+
+# scaffold the app (pick your own options; standalone is the default)
+ng new app --style=scss --routing=false
+```
+
+You can keep the app at the repo root or in a subfolder — just make sure the run
+commands below work from a clean clone.
+
+**3. Run it**
+
+```bash
+npm install
+npm start        # then open http://localhost:4200
+```
+
+**4. Run the tests**
+
+```bash
+npm test
+```
 
 ## Data
 
@@ -118,9 +155,23 @@ together in a short follow-up chat, so submit only what you can stand behind.
 
 ## How to submit
 
-1. Create your own repository (or fork this one) and build your solution there.
-2. Make sure `npm install && npm start` works from a clean clone.
-3. Send us the link (or a zip including the `.git` history).
+1. Commit your work to **your** repository (the one you created in *Getting
+   started*), committing incrementally as you go.
+2. Add a short **NOTES.md** at the root covering: how to run it, the performance
+   techniques you chose and **why**, your key trade-offs, and where AI helped.
+3. Double-check that a **fresh clone** works end to end:
+   ```bash
+   git clone https://github.com/<your-username>/<your-repo>.git test-clone
+   cd test-clone
+   npm install
+   npm start
+   ```
+4. Send us the **link to your repository**. If it's private, invite us / share it
+   so we can access it. No repo? A zip that **includes the `.git` folder** (so we
+   can see your commit history) also works.
+
+That's it — please don't spend more than ~2 hours on it. We'd rather see a small,
+clean, well-explained solution than a large unfinished one.
 
 ---
 
