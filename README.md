@@ -34,8 +34,9 @@ visible rows are in the DOM, a **debounced** search, `OnPush`/signals and
 
 ## Getting started
 
-There is no starter project on purpose — set up the Angular app yourself, so we
-can see how you structure things from scratch. Keep it to a single, focused screen.
+The project is **already set up** — Angular, TypeScript, SCSS and the test runner
+(Vitest) are configured, and the data is ready. Just get your copy, install, and
+start building. **No `ng new`, no config** — spend your time on the feature itself.
 
 **1. Get your own copy of this repo**
 
@@ -43,71 +44,52 @@ can see how you structure things from scratch. Keep it to a single, focused scre
   top of this page, and create it under **your own** GitHub account.
   *(Alternatively, clone this repo and push it to a fresh repository of yours —
   please don't open pull requests against this template.)*
-- Clone your new repository locally:
+- Clone your new repository and install:
   ```bash
   git clone https://github.com/<your-username>/<your-repo>.git
   cd <your-repo>
+  npm install
   ```
 
-**2. Create the Angular app inside it**
+**2. Run it**
 
 ```bash
-# install the Angular CLI if you don't have it
-npm install -g @angular/cli
-
-# scaffold the app (pick your own options; standalone is the default)
-ng new app --style=scss --routing=false
-```
-
-You can keep the app at the repo root or in a subfolder — just make sure the run
-commands below work from a clean clone.
-
-**3. Run it**
-
-```bash
-npm install
 npm start        # then open http://localhost:4200
 ```
 
-**4. Run the tests**
+You'll see a placeholder screen telling you where to build. **That's where your
+work goes.**
+
+**3. Run the tests**
 
 ```bash
 npm test
 ```
 
-## Data
+Two example tests already pass (for the app shell and the data service) — use them
+as a starting point.
 
-You don't get a 50k JSON file — **generate the dataset in code** so the list is
-large. A minimal generator (adapt as you like):
+## Data (already provided)
+
+You don't need to build or fetch any data — a ready-to-use service is included:
+
+- `src/app/applications/application.model.ts` — the `Application` type.
+- `src/app/applications/applications.service.ts` — `ApplicationsService`, which
+  returns **~50,000 applications** asynchronously (simulating a slow network call).
+
+Use it from your component like this:
 
 ```ts
-type ApplicationStatus = 'draft' | 'submitted' | 'approved' | 'rejected';
+private readonly _applications = inject(ApplicationsService);
 
-interface Application {
-  id: string;
-  applicantName: string;
-  status: ApplicationStatus;
-  submittedAt: string; // ISO date
-  loanAmount: number;
-}
-
-const STATUSES: ApplicationStatus[] = ['draft', 'submitted', 'approved', 'rejected'];
-const NAMES = ['Aoife Byrne', 'Liam Kelly', 'Saoirse Nolan', 'Conor Walsh', 'Niamh Doyle', 'Cian Murphy'];
-
-function makeApplications(count = 50_000): Application[] {
-  return Array.from({ length: count }, (_, i) => ({
-    id: String(i + 1),
-    applicantName: `${NAMES[i % NAMES.length]} ${i}`,
-    status: STATUSES[i % STATUSES.length],
-    submittedAt: new Date(2026, 0, 1 + (i % 300)).toISOString().slice(0, 10),
-    loanAmount: 50_000 + (i % 40) * 7_500,
-  }));
-}
+// ...
+this._applications.getApplications().subscribe(/* ... */);
 ```
 
-Load it through a small **service** that returns it asynchronously (e.g. wrapped
-in an observable/promise with a short delay), so loading/error states are real.
-Feel free to add an artificial failure path to exercise the error state.
+To exercise the **error** state, call `getApplications({ fail: true })`. You can
+also pass `{ count: 100 }` to work with a smaller list while developing.
+
+You're free to change the service if you want — but you shouldn't need to.
 
 ## Ground rules
 

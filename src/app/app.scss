@@ -1,0 +1,35 @@
+:host {
+  --shell-max-width: 960px;
+  --shell-gap: 12px;
+  --shell-fg: #1a1a1a;
+  --shell-muted: #5a5a5a;
+  --shell-code-bg: #f2f2f2;
+
+  display: block;
+  color: var(--shell-fg);
+}
+
+.shell {
+  max-width: var(--shell-max-width);
+  margin: 0 auto;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--shell-gap);
+
+  &__title {
+    margin: 0;
+  }
+
+  &__hint {
+    margin: 0;
+    color: var(--shell-muted);
+    line-height: 1.5;
+  }
+
+  code {
+    background: var(--shell-code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+}
