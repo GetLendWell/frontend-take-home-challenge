@@ -3,7 +3,12 @@
 Thanks for taking the time! This is a short, practical Angular exercise meant to
 take **1–2 hours**. It mirrors the kind of screen we build day to day.
 
-**Stack:** Angular (latest), TypeScript, SCSS.
+**Stack:** Angular, TypeScript, SCSS.
+
+> **Versions (for reference only):** we use **Angular 21** and **TypeScript 5.9**
+> internally, on **Node 20+**. You're welcome to use the same, but it's **not a
+> requirement** — the latest stable Angular is perfectly fine. Use whatever you're
+> comfortable with.
 
 ---
 
@@ -118,9 +123,9 @@ Please follow these — they reflect how we work:
 
 - A project that runs with `npm install && npm start`.
 - Unit tests on the interesting logic (e.g. combined filters, empty state).
-- A short **NOTES.md** (or a section at the bottom of this README in your fork)
-  covering: how to run it, the performance techniques you chose and **why**, the
-  key trade-offs you made, and where AI helped (see below).
+- **Optional:** a short **NOTES.md** at the root with a few notes on your solution
+  (see *How to submit* for what to include). It's optional — if you skip it, we'll
+  just cover the same points in the follow-up chat.
 
 Please commit incrementally rather than in one big commit.
 
@@ -157,8 +162,14 @@ together in a short follow-up chat, so submit only what you can stand behind.
 
 1. Commit your work to **your** repository (the one you created in *Getting
    started*), committing incrementally as you go.
-2. Add a short **NOTES.md** at the root covering: how to run it, the performance
-   techniques you chose and **why**, your key trade-offs, and where AI helped.
+2. *(Optional but appreciated)* Add a short **NOTES.md** at the root. If you write
+   one, a few lines on each of these is plenty — no need for a long document:
+   - how to run it (if anything differs from `npm install && npm start`);
+   - the performance techniques you chose, and **why**;
+   - any key trade-offs or things you'd do differently with more time;
+   - where AI tools helped (see *Using AI tools* above).
+
+   If you skip it, no problem — we'll talk through the same points together.
 3. Double-check that a **fresh clone** works end to end:
    ```bash
    git clone https://github.com/<your-username>/<your-repo>.git test-clone
@@ -172,6 +183,22 @@ together in a short follow-up chat, so submit only what you can stand behind.
 
 That's it — please don't spend more than ~2 hours on it. We'd rather see a small,
 clean, well-explained solution than a large unfinished one.
+
+## Before you submit — quick checklist
+
+- [ ] The app runs from a **fresh clone** with `npm install` then `npm start`.
+- [ ] The list shows name, status, date and loan amount.
+- [ ] Search + status filter work together.
+- [ ] The **50k list scrolls and filters smoothly** (this is the main point).
+- [ ] Loading, empty (no results) and error states are handled.
+- [ ] A couple of unit tests pass with `npm test`.
+- [ ] *(Optional)* a short `NOTES.md`.
+
+## Questions?
+
+If anything here is unclear, please just reach out to your contact at LendWell
+(reply to the email thread you received this from). There are no trick questions —
+we're happy to clarify anything before or while you work on it.
 
 ---
 
