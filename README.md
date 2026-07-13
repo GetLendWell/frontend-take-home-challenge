@@ -38,13 +38,8 @@ The project is **already set up** — Angular, TypeScript, SCSS and the test run
 (Vitest) are configured, and the data is ready. Just get your copy, install, and
 start building. **No `ng new`, no config** — spend your time on the feature itself.
 
-**1. Get your own copy of this repo**
+**1. Clone the repo I've shared with you and install**
 
-- Click the green **"Use this template" → "Create a new repository"** button at the
-  top of this page, and create it under **your own** GitHub account.
-  *(Alternatively, clone this repo and push it to a fresh repository of yours —
-  please don't open pull requests against this template.)*
-- Clone your new repository and install:
   ```bash
   git clone https://github.com/<your-username>/<your-repo>.git
   cd <your-repo>
@@ -111,22 +106,6 @@ Please follow these — they reflect how we work:
 
 Please commit incrementally rather than in one big commit.
 
-## What we expect at a senior level
-
-The task is deliberately compact — we care about *how* you build it. Show us the
-judgment we'd rely on day to day:
-
-- **Performance under load:** the 50k list scrolls and filters smoothly. You can
-  explain *what* would jank without your approach and *why* your fix works
-  (virtualization, debounce, `OnPush`/signals, `trackBy`).
-- **Robust states:** loading vs. empty-dataset vs. no-results vs. error — and a
-  retry path. No silent failures.
-- **Testing strategy:** not just line coverage — what's worth testing and why.
-- **Architecture:** clean separation (data access vs. presentation), a typed model,
-  and abstractions that would survive real growth without over-engineering today.
-
-We'll walk through these decisions together in a follow-up conversation.
-
 ## Nice to have (optional)
 
 Sortable columns or a result count · filters persisted in the URL ·
@@ -142,8 +121,8 @@ together in a short follow-up chat, so submit only what you can stand behind.
 
 ## How to submit
 
-1. Commit your work to **your** repository (the one you created in *Getting
-   started*), committing incrementally as you go.
+1. Commit your work to the repo I've shared with you, committing incrementally as
+   you go.
 2. *(Optional but appreciated)* Add a short **NOTES.md** at the root. If you write
    one, a few lines on each of these is plenty — no need for a long document:
    - how to run it (if anything differs from `npm install && npm start`);
@@ -152,16 +131,8 @@ together in a short follow-up chat, so submit only what you can stand behind.
    - where AI tools helped (see *Using AI tools* above).
 
    If you skip it, no problem — we'll talk through the same points together.
-3. Double-check that a **fresh clone** works end to end:
-   ```bash
-   git clone https://github.com/<your-username>/<your-repo>.git test-clone
-   cd test-clone
-   npm install
-   npm start
-   ```
-4. Send us the **link to your repository**. If it's private, invite us / share it
-   so we can access it. No repo? A zip that **includes the `.git` folder** (so we
-   can see your commit history) also works.
+3. Do a final check that the app runs cleanly (`npm install && npm start`), then
+   **email me to let me know you're done** — I already have access to the repo.
 
 That's it — please don't spend more than ~2 hours on it. We'd rather see a small,
 clean, well-explained solution than a large unfinished one.
