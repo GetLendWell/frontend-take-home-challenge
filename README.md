@@ -109,8 +109,7 @@ Please commit incrementally rather than in one big commit.
 ## Nice to have (optional)
 
 Sortable columns or a result count · filters persisted in the URL ·
-currency/date formatting via a pure pipe · a note on how you'd move the filtering
-server-side if the data no longer fit in memory.
+currency/date formatting via a pure pipe.
 
 ## Using AI tools
 
